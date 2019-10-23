@@ -18,4 +18,25 @@ $(document).ready(function(){
 
     event.preventDefault();
   });
+
+    $("#form1").submit(function(event) {
+      var nameInput = $("input#name").val();
+
+      $(".name").append(nameInput);
+
+      $("#letter").show();
+
+      event.preventDefault();
+  });
+
+    $("#form2").submit(function(event) {
+       var userInput = $("input#userInput").val();
+
+       $(".userInput").append(userInput.toUpperCase());
+       
+       $("#shout").show();
+
+       console.log(userInput);
+       event.preventDefault();
+  });
 });
